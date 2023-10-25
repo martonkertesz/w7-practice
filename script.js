@@ -1,40 +1,22 @@
-/* let variable = 10
-variable = 20
-
-const variable2 = 50
-// variable2 = 100 <-- hibara fut, mert const valtozot nem lehet = jellel uj erteket adni
-
-let array = [1, 2, 3]
-array = [4, 5, 6]
-array.push(10)
-
-const array2 = [10, 20, 30]
-// array2 = [40, 50, 60]
-array2.push(100)
-array2[0] = 11
-
-console.log(array2)
- */
-
-
-
-const arr = ["kiss bela", "nagy jozsi", "toth janos"]
-
-/* for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i])
+let obj {
+    key1: "value",
+    key2: 100,
+    key3: true,
+    key4: ["one", "two", "three", "four"],
+    key5: {
+        nestedKEy1: "nested value",
+        nestedKEy2: 200,
+        nedtesKey3: false,
+        nedtesKey4: ["ein"], "zwei", "drei"],
+        nestedKey5: {nestedKey: "hello"}
+    } 
 }
- */
 
-lett lettersLength = o
-arr.forEachResult = arr.forEach((value, index) => {
-    //console.log("at index: ", index, "is", value)
-    console.log(`at index: ${index + 1} is: ${value}`) // template literal, ${jsExpression} <- template literal expression
-    return v
+console.log(obj.key4)
+
+for (let i = 0; i < obj.key4.length; i ++) {
+    console.log(obj.key4[i])
+}
+const objectKEys.forEachh((key) => {
+    console.log(key, obj[key])
 })
-
-let mapResult = arr.map((value, index) => {
-    console.log(`at index: ${index + 1} is: ${value}`)
-})
-
-console.log("letterslengthh:", lettersLength)
-console.log("mapResult, ")
