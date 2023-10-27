@@ -91,12 +91,14 @@ const data = [
     }
 ]
 
-
+//FOR CIKLUS    
 /* for (let i = 0; i < data.length; i++) {
     if (data[i].age >= 60 && data[i].mostRecentPurchase.price >= 20000)
     console.log(data[i])
 } */
 
+
+//UGYANAZ, CSAK FUNCTIONNEL
 function addTwoNumbers(number1, number2) {
     let result = number1 + number2
 
@@ -105,15 +107,16 @@ function addTwoNumbers(number1, number2) {
 const addTwoNumbersResult = addTwoNumbers(1, 2)
 // console.log("addTwoNumbers: ", addTwoNumbersResult)
 
+// CALLBACK FUGGVENY FOREACHEL, AMI VISSZAAD EGY ARRAYT, VISSZATER ES OSSZEFUZI OKET
 function concatenateArray(array) {
-    /* let result = ""
+    let result = ""
     array.forEach((string) => {
-       result += string
+       result += string //result = result + string
     })
 
-    return result */
+    return result 
 
-    // let result = array.join("")
+    // let result = array.join("") //UGYANAZ, CSAK JOINNAL
 }
 
 const arrayOfStrings = ["kismacska", "codecool", "javascript", "wednesday", "exam"]
@@ -146,23 +149,33 @@ console.log(richPeople)
 
 
 
-/* function goodRecommendationFor(arrayOfPeople, newOffer) {
+// uj offer jo ajanlas -e
+function goodRecommendationFor(arrayOfPeople, newOffer) {
+    let result = []
+
     for (let i = 0; i < arrayOfPeople.length; i++) {
     // console.log(arrayOfPeople[i].mostRecentPurchase)
 
     if (arrayOfPeople[i].mostRecentPurchase.color === newOffer.color && arrayOfPeople[i].mostRecentPurchase.price > newOffer.price) {
+        result.push(arrayOfPeople[i].name)
         console.log(arrayOfPeople[i].name, "egyezik a color")
-    } */
+    } 
     result = arrayOfPeople.filter((person) => person.mostRecentPurchase.color === newOffer.color && person.mostRecentPurchase.price > newOffer.price)
 
     
 
     return result   
-
+    }
+}
 
 const newOffer1 = {
+    color: "black",
+    price: 8000
+}
+
+const newOffer2 = {
     color: "yellow",
-    price: 30000
+    price: 14000
 }
 const goodRecommendations = goodRecommendationFor(data, newOffer1)
 console.log(goodRecommendations)
@@ -170,7 +183,7 @@ console.log(goodRecommendations)
 
 
 
-
-arrayOfPeople.filter((person) => person.mostRecentPurchase.color === newOffer.color && person.mostRecentPurchase.price > newOffer.price)
+//for loop helyett
+result = arrayOfPeople.filter((person) => person.mostRecentPurchase.color === newOffer.color && person.mostRecentPurchase.price > newOffer.price)
 
 return result 
